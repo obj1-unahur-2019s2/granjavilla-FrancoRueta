@@ -2,7 +2,7 @@ import wollok.game.*
 import hector.*
 import cultivos.*
 
-program farmville {
+/*program farmville {
 	//  CONFIG	
 	game.title("FarmVille")
 	game.height(10)
@@ -15,4 +15,32 @@ program farmville {
  	
  	//  COMIENZA
 	game.start()
+
 }
+	//TECLADO
+	keyboard.r().onPressDo({})*/
+	
+	
+program wollquest {
+	// CONFIG
+	
+	game.title("Wollquest")
+	game.height(20)
+	game.width(15)
+	game.ground("pngDeFondoxd.png")
+	
+	// VISUALES
+	game.addVisualCharacter(progrHammer)
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+	
+	
+
