@@ -1,0 +1,15 @@
+import wollok.game.*
+import dado.*
+
+program wollquest {
+	var dado1 = new Dado()
+	//DATOS DEL JUEGO
+	game.title("Wollquest")
+	game.width(30)
+	game.height(15)
+	game.boardGround("fondo1.png")
+	game.start()
+	//VISUALES DADOS
+	keyboard.up().onPressDo{dado1.tirarDado()}
+	keyboard.enter().onPressDo{game.addVisual(dado1)}
+}

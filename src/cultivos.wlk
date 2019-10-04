@@ -22,15 +22,12 @@ class Maiz {
 
 class Dado{
 	var numeros = [1,2,3,4,5,6]
-	
+	var position = game.origin()
+	}
 	
 	method tirarDado(){
 		return numeros.anyOne()
 	}
-}
-
-object pj{
-	method 
 }
 
 
