@@ -11,16 +11,19 @@ program farmville {
 
 	//  VISUALES
  	game.addVisualCharacter(hector)
- 	game.addVisualIn(new Maiz(), game.at(1, 1))
  	
  	//  COMIENZA
+
+
+	//TECLADO
+	keyboard.m().onPressDo({new Maiz().plantarMaiz()})
+	keyboard.t().onPressDo({new Trigo().plantarTrigo()})
+	keyboard.o().onPressDo({new Tomaco().plantarTomaco()})
+	keyboard.r().onPressDo({hector.regarPlantas()})
+	keyboard.c().onPressDo({hector.cosechar()})
+	
+	
+	
 	game.start()
 
 }
-	//TECLADO
-	keyboard.r().onPressDo({})
-
-	
-	
-	
-

@@ -5,7 +5,7 @@ import wollok.game.*
 class Dado{
 	var numeros = [1,2,3,4,5,6]
 	var property position = new Position(x=0,y=0)
-	var numeroDeDado
+	var property numeroDeDado
 	
 	method image(){
 		return if  (numeroDeDado == 1){"dado1.png"}
