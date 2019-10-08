@@ -1,8 +1,12 @@
 import wollok.game.*
 import hector.*
 import cultivos.*
+import juegoVilla.*
+import oso.*
 
 program farmville {
+	
+	
 	//  CONFIG	
 	game.title("FarmVille")
 	game.height(10)
@@ -10,20 +14,18 @@ program farmville {
 	game.ground("ground.png")
 
 	//  VISUALES
- 	game.addVisualCharacter(hector)
- 	
- 	//  COMIENZA
+ 	juegoGranjavilla.configurarVisuales()
 
 
 	//TECLADO
-	keyboard.m().onPressDo({new Maiz().plantarMaiz()})
-	keyboard.t().onPressDo({new Trigo().plantarTrigo()})
-	keyboard.o().onPressDo({new Tomaco().plantarTomaco()})
-	keyboard.r().onPressDo({hector.regarPlantas()})
-	keyboard.c().onPressDo({hector.cosechar()})
+	juegoGranjavilla.configurarTeclado()
+	juegoGranjavilla.configurarMovimientos()
 	
 	
+	//
+	juegoGranjavilla.configurarAcciones()
 	
+	//  COMIENZA
 	game.start()
 
 }

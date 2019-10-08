@@ -4,6 +4,7 @@ import hector.*
 class Maiz {
 	var property position = new Position(x=0,y=0)
 	var esAdulta = false
+	var property valorDePlanta = 150
 	
 	method image() {
 		return if (esAdulta){"corn_adult.png"}
@@ -19,7 +20,9 @@ class Maiz {
 	}
 	
 	method cosechar(){
-		if (esAdulta) {game.removeVisual(self)}
+		if (esAdulta) {game.removeVisual(self)
+			hector.plantasCosechadas().add(self)
+		}
 		else {}
 	}
 }
@@ -27,6 +30,7 @@ class Maiz {
 class Trigo {
 	var property position = new Position(x=0,y=0)
 	var etapaEvolucion = 0
+	var property valorDePlanta = etapaEvolucion - 1 * 100
 	
 	method plantarTrigo(){
 		game.addVisual(new Trigo(position = hector.position()))
@@ -45,7 +49,10 @@ class Trigo {
 	}
 	
 	method cosechar(){
-		
+		if (etapaEvolucion >= 2 ){
+			game.removeVisual(self)
+			hector.plantasCosechadas().add(self)
+		}
 	}
 	
 	}
@@ -53,6 +60,9 @@ class Trigo {
 
 class Tomaco {
 	var property position = new Position(x=0,y=0)
+	var property valorDePlanta = 80
+	
+	
 	method image() {return "tomaco_baby.png"}
 	
 	method plantarTomaco(){
@@ -60,11 +70,17 @@ class Tomaco {
 	}
 	
 	method regarPlanta(){
-		position = new Position(x=position.x(),y=position.x()+1)
+		self.position(self.position().up(1))
+	}
+	
+	method cosechar(){
+		game.removeVisual(self)
+		hector.plantasCosechadas().add(self)
 	}
 	
 	
-	}
+	
+}
 
 
 

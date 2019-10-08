@@ -6,7 +6,7 @@ Para ello tiene que sembrar, regar y cosechar sus cultivos. Después de la cosec
 Héctor es muy ahorrativo y todo el oro que obtiene por sus cosechas lo acumula.
 
 Nuestro objetivo es construir un juego en el que podamos controlar a héctor, 
-utilizando el teclado para moverlo alrededor del tablero. 
+utilizando el teclado para moverlo alrededor del tablero. +
 
 En este juego consideramos tres especies: _maíz_, _trigo_ y _tomaco_. 
 
