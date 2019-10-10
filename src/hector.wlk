@@ -21,12 +21,31 @@ object hector {
 		}
 		
 	method venderPlantas(){
-		var plataGanada = plantasCosechadas.map({planta => planta.valorDePlanta()}).sum()
-		oroAcumulado = plataGanada
-		plantasCosechadas = []
+		var plataAGanar = plantasCosechadas.map({planta => planta.valorDePlanta()}).sum()
 		
+		if (game.colliders(self).any({obj => obj.esMercado()})){
+			if(not self.plantasCosechadas().isEmpty()){
+		oroAcumulado = plataAGanar
+		plantasCosechadas = []
+		}
+		else {game.say(self,"no tengo nada para vender")}
+		}
+		else {game.say(self,"no estoy en un mercado")}
 	}
-	
+}
+
+
+class Mercado{
+	var property position = new Position(x=0,y=0)
+	var property image = "market.png"
+	var property cantidadMonedas = 0
+	var property mercaderiaParaVender = []
+	var property esMercado = true
 	
 	
 }
+
+
+
+
+

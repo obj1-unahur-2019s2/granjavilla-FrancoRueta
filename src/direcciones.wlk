@@ -2,7 +2,7 @@ import wollok.game.*
 
 object norte {
 	method siguientePosicion(position){
-		if (position.x() == game.height() - 1) {
+		if (position.y() == game.height() - 1) {
 			return position
 		}
 		else {
@@ -13,7 +13,7 @@ object norte {
 
 object sur {
 	method siguientePosicion(position){
-		if (position.x() == 0) {
+		if (position.y() == 0) {
 			return position
 		}
 		else {

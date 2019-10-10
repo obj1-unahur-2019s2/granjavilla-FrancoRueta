@@ -88,3 +88,11 @@ Una vez que vende lo que tiene para vender, obviamente, deja de tenerlo.
 Incluir dos o tres mercados (imagen `market.png`), eligiendo dónde poner cada uno en el tablero. 
 Cada mercado tiene una cantidad de monedas, y mercadería para vender.  
 Hacer que Héctor solamente pueda vender si está en un mercado, y además el mercado tiene suficiente cantidad de monedas para pagar lo que Héctor tiene para vender. En tal caso, la mercadería se agrega al mercado, y se le descuentan las monedas que le da a Héctor en pago.  
+
+
+
+
+
+
+
+

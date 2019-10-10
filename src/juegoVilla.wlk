@@ -16,12 +16,16 @@ object juegoGranjavilla {
 	keyboard.q().onPressDo({hector.regarPlantas()})
 	keyboard.w().onPressDo({hector.cosechar()})
 	keyboard.r().onPressDo({hector.venderPlantas()})
+	keyboard.space().onPressDo({game.say(hector,"tengo " + hector.oroAcumulado() + " monedas, y " + hector.plantasCosechadas().size() + " plantas para vender")})
 		
 	}
 	
 	method configurarVisuales(){
  	game.addVisual(hector)
  	game.addVisual(oso)
+ 	game.addVisualIn(new Mercado(), game.at(3,3))
+ 	game.addVisualIn(new Mercado(),game.at(3,5))
+ 	
 	}
 	
 	method configurarMovimientos(){
